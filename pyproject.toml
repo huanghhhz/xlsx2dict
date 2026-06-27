@@ -1,8 +1,9 @@
 [project]
 name = "xlsx2dict"
-version = "0.1.1"
+version = "0.1.2"
 description = "A python library for reading and writing Excel files, converting between xlsx and dict or text"
 readme = "README.md"
+license = {text = "MIT"}
 requires-python = ">=3.8"
 authors = [
     {name = "hhhpy", email = "huanghuanhuanhdu@gmail.com"},
@@ -12,6 +13,28 @@ dependencies = [
     "python-calamine",
     "tabulate",
 ]
+keywords = ["excel", "xlsx", "dict", "convert", "spreadsheet", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Office/Business",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Repository = "https://github.com/huanghhhz/xlsx2dict"
 
 [project.scripts]
 xlsx2text = "xlsx2dict.cli:main"
