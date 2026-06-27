@@ -1,0 +1,22 @@
+[project]
+name = "xlsx2dict"
+version = "0.1.1"
+description = "A python library for reading and writing Excel files, converting between xlsx and dict or text"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "hhhpy", email = "huanghuanhuanhdu@gmail.com"},
+]
+dependencies = [
+    "xlsxwriter",
+    "python-calamine",
+    "tabulate",
+]
+
+[project.scripts]
+xlsx2text = "xlsx2dict.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
