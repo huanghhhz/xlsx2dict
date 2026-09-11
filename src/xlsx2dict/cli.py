@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
 from python_calamine import CalamineWorkbook
+from tabulate import tabulate
 from xlsx2dict import xlsx2text
 
 def main():
@@ -14,9 +15,11 @@ def main():
         if not Path(args.xlsx_file).is_file():
             raise FileNotFoundError(f"File '{args.xlsx_file}' does not exist.")
         workbook = CalamineWorkbook.from_path(args.xlsx_file)
+        rows = []
         for sheet_index, sheet_name in enumerate(workbook.sheet_names, start=1):
             sheet = workbook.get_sheet_by_name(sheet_name)
-            print(f"{sheet_index}\t{sheet_name}\t{sheet.height}\t{sheet.width}")
+            rows.append([sheet_index, sheet_name, sheet.height, sheet.width])
+        print(tabulate(rows, headers=["Index", "SheetName", "Rows", "Columns"], tablefmt="simple", stralign="left", disable_numparse=True))
     else:
         xlsx2text(args.xlsx_file, index=args.index, output_file=args.output)
 
