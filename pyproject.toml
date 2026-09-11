@@ -1,6 +1,6 @@
 [project]
 name = "xlsx2dict"
-version = "0.1.2"
+version = "0.2.0"
 description = "A python library for reading and writing Excel files, converting between xlsx and dict or text"
 readme = "README.md"
 license = {text = "MIT"}
