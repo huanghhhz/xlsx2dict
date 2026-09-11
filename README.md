@@ -53,6 +53,10 @@ xlsx2text example.xlsx -i 1
 
 # Save output to file
 xlsx2text example.xlsx -o output.txt
+
+# Show sheet info (No. SheetName Rows Columns)
+xlsx2text example.xlsx -c
+xlsx2text example.xlsx --count
 ```
 
 ## License
